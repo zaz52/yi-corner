@@ -1,5 +1,16 @@
 [
   {
+    "name": "knowledge-atlas",
+    "type": "GitHub 开源项目",
+    "desc": "知图 Knowledge Atlas：现代数字知识图书馆与交互式历史知识图谱",
+    "href": "https://zhitu.weiyi.indevs.in",
+    "tags": [
+      "TypeScript"
+    ],
+    "featured": false,
+    "github": "https://github.com/zaz52/knowledge-atlas"
+  },
+  {
     "name": "cangbai-cinema",
     "type": "GitHub 开源项目",
     "desc": "苍柏 CINEMA：Cloudflare Workers + D1 影视搜索、授权源管理与在线播放网站",
