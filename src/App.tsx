@@ -22,6 +22,7 @@ import {
   Wrench,
   MoonStar,
   Clapperboard,
+  Network,
 } from 'lucide-react';
 import { defaultProjects as projects } from './data/siteProjects';
 import { defaultContacts as contacts } from './data/siteContacts';
@@ -921,19 +922,19 @@ export default function App() {
           </div>
         </section>
 
-        {/* 乾坤之道：站内直接使用 */}
-        <section id="suangua" className="space-y-6 scroll-mt-28">
-          <SectionHead icon={<MoonStar size={18} />} zh="乾坤之道" en="DIVINATION" note="不用跳转，直接开算" />
+        {/* 知图：站内直接使用 */}
+        <section id="zhitu" className="space-y-6 scroll-mt-28">
+          <SectionHead icon={<Network size={18} />} zh="知图" en="KNOWLEDGE ATLAS" note="交互式知识图谱，直接探索" />
           <div className={`${glass} overflow-hidden rounded-[1.75rem]`}>
             <iframe
-              src="https://suangua.weiyiai.top/"
-              title="乾坤之道"
+              src="https://zhitu.weiyi.indevs.in/"
+              title="知图"
               className="h-[80vh] min-h-[560px] w-full border-0"
               loading="lazy"
             />
           </div>
           <p className="text-center text-xs text-slate-400">
-            加载不出来？<a href="https://suangua.weiyiai.top/" target="_blank" rel="noreferrer" className="font-bold text-indigo-600 hover:underline">在新窗口打开 →</a>
+            加载不出来？<a href="https://zhitu.weiyi.indevs.in/" target="_blank" rel="noreferrer" className="font-bold text-indigo-600 hover:underline">在新窗口打开 →</a>
           </p>
         </section>
 
@@ -968,6 +969,22 @@ export default function App() {
           </div>
         </section>
 
+
+        {/* 乾坤之道：站内直接使用 */}
+        <section id="suangua" className="space-y-6 scroll-mt-28">
+          <SectionHead icon={<MoonStar size={18} />} zh="乾坤之道" en="DIVINATION" note="不用跳转，直接开算" />
+          <div className={`${glass} overflow-hidden rounded-[1.75rem]`}>
+            <iframe
+              src="https://suangua.weiyiai.top/"
+              title="乾坤之道"
+              className="h-[80vh] min-h-[560px] w-full border-0"
+              loading="lazy"
+            />
+          </div>
+          <p className="text-center text-xs text-slate-400">
+            加载不出来？<a href="https://suangua.weiyiai.top/" target="_blank" rel="noreferrer" className="font-bold text-indigo-600 hover:underline">在新窗口打开 →</a>
+          </p>
+        </section>
 
         {/* 小游戏 */}
         <section id="games" className="space-y-6 scroll-mt-28">
