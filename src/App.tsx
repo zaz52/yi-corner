@@ -771,8 +771,27 @@ export default function App() {
                 进店看看 <ArrowUpRight size={16} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </span>
             </a>
-            {/* 其他三张 */}
-            <div className="grid gap-5 md:grid-cols-3">
+            {/* 其他四张 */}
+            <div className="grid gap-5 md:grid-cols-2">
+            {/* 苹果共享ID */}
+            <a
+              href="https://id.qianyuwing.com/"
+              target="_blank"
+              rel="noreferrer"
+              className="group relative flex flex-col overflow-hidden rounded-[1.75rem] bg-gradient-to-br from-neutral-900 via-zinc-900 to-black p-7 text-white shadow-xl shadow-zinc-300 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-zinc-300"
+            >
+              <div className="pointer-events-none absolute -right-12 -top-12 size-48 rounded-full bg-white/10 blur-2xl" />
+              <div className="relative">
+                <div className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-bold backdrop-blur-sm">
+                  🍎 共享账号
+                </div>
+                <h3 className="mt-3 text-xl font-extrabold tracking-tight">苹果共享ID</h3>
+                <p className="mt-2 text-sm leading-relaxed text-white/70">共享 Apple ID 资源，拿来即用，下载应用更方便。</p>
+              </div>
+              <span className="relative mt-auto inline-flex items-center gap-1.5 pt-6 text-sm font-extrabold">
+                去看看 <ArrowUpRight size={16} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              </span>
+            </a>
             {/* X-Deck 创作台 */}
             <a
               href="https://x.weiyi.indevs.in/"
