@@ -849,6 +849,25 @@ export default function App() {
                 去下载 <ArrowUpRight size={16} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </span>
             </a>
+            {/* 知微工作台 */}
+            <a
+              href="https://zhiwei.weiyi.indevs.in/"
+              target="_blank"
+              rel="noreferrer"
+              className="group relative flex flex-col overflow-hidden rounded-[1.75rem] bg-gradient-to-br from-[#a34d28] via-[#bc5837] to-[#7e3b1e] p-7 text-white shadow-xl shadow-orange-200 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-orange-200"
+            >
+              <div className="pointer-events-none absolute -right-12 -top-12 size-48 rounded-full bg-white/15 blur-2xl" />
+              <div className="relative">
+                <div className="inline-flex items-center gap-1.5 rounded-full bg-white/20 px-3 py-1 text-xs font-bold backdrop-blur-sm">
+                  🔬 科学备课
+                </div>
+                <h3 className="mt-3 text-xl font-extrabold tracking-tight">知微工作台</h3>
+                <p className="mt-2 text-sm leading-relaxed text-white/85">小学科学探究备课工作台，教案设计一键生成。</p>
+              </div>
+              <span className="relative mt-auto inline-flex items-center gap-1.5 pt-6 text-sm font-extrabold">
+                去备课 <ArrowUpRight size={16} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              </span>
+            </a>
             </div>
           </div>
         </section>
