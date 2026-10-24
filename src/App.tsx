@@ -23,6 +23,7 @@ import {
   MoonStar,
   Clapperboard,
   Network,
+  Bitcoin,
 } from 'lucide-react';
 import { defaultProjects as projects } from './data/siteProjects';
 import { defaultContacts as contacts } from './data/siteContacts';
@@ -1152,6 +1153,22 @@ export default function App() {
             <p className="text-xs text-slate-500">一隅之地 · Crafted with Motion & React</p>
           </div>
         </footer>
+        {/* 悬浮侧边栏：芊羽Wing */}
+        <a
+          href="https://qianyuwing.com/"
+          target="_blank"
+          rel="noreferrer"
+          title="芊羽Wing · 币圈工具与交易学习导航"
+          className="group fixed left-0 top-1/2 z-40 hidden w-[52px] -translate-y-1/2 items-center gap-3 overflow-hidden rounded-r-2xl border border-white/70 bg-white/60 py-3 pl-3 shadow-lg shadow-indigo-100 backdrop-blur-xl transition-all duration-300 hover:w-[216px] hover:bg-white/85 sm:flex"
+        >
+          <span className="grid size-7 shrink-0 place-items-center rounded-full bg-gradient-to-br from-amber-500 to-orange-600 text-white shadow-md shadow-orange-200">
+            <Bitcoin size={16} />
+          </span>
+          <span className="whitespace-nowrap opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+            <span className="block text-sm font-extrabold text-slate-800">芊羽Wing</span>
+            <span className="block text-[11px] font-semibold text-slate-500">币圈工具与交易导航</span>
+          </span>
+        </a>
         <MusicPlayer />
       </main>
     </div>
