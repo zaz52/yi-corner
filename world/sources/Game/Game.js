@@ -178,6 +178,7 @@ export class Game
             (toLoad, total) =>
             {
                 this.world.intro.updateProgress(1 - toLoad / total)
+                window.__yiBootStatus?.(`正在加载场景资源… ${Math.round((1 - toLoad / total) * 100)}%`)
             }
         )
 
