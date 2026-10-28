@@ -43,8 +43,8 @@
     },
     {
       "path": "basis/basis_transcoder.js",
-      "sha256": "09b6157877e16d9759c3d8897cbb2e9c25248e7d12601e6aa9b064f17ba64f5c",
-      "size": 57552
+      "sha256": "176d36c671637639fff989bad0f27f9df8eb4f1fc4b10a565e95786e93c8589c",
+      "size": 57533
     },
     {
       "path": "basis/basis_transcoder.wasm",
@@ -53,8 +53,8 @@
     },
     {
       "path": "basis/README.md",
-      "sha256": "e9223776af0e36685d7ebf926df1f7e1844565ec29b64a0b4b10e671b0f3c228",
-      "size": 1494
+      "sha256": "930b11bbbb742b2525491b0964f0462d63d8b21383c0623ec4c98c43d53723c6",
+      "size": 1448
     },
     {
       "path": "behindTheScene/stars.ktx",
@@ -258,8 +258,8 @@
     },
     {
       "path": "draco/draco_decoder.js",
-      "sha256": "cebb944c8cb7606782fe6b06584454df8f93835a9a7346f7b1efcc0fb72b2ac1",
-      "size": 719444
+      "sha256": "30e4d486fa020737af10e3c56197693e5b904bdc05b8bfa5d7b06751dec6da04",
+      "size": 719410
     },
     {
       "path": "draco/draco_decoder.wasm",
@@ -268,18 +268,18 @@
     },
     {
       "path": "draco/draco_encoder.js",
-      "sha256": "068f04585ac6f1186c2e655dbf87774e7ba417e9665865346428a5e744ca64bd",
-      "size": 928751
+      "sha256": "d5c653caf242556ddff9370e86979b8b5c6131bc196be388698a85dc2e1bb59b",
+      "size": 928718
     },
     {
       "path": "draco/draco_wasm_wrapper.js",
-      "sha256": "fc9a2f87811e037f240f5e095386d0751a026ac535bc938acc6425236f9a0bad",
-      "size": 58880
+      "sha256": "e8049906ef3f8f75d3456c22a3f31bfdfe5b5b5bd09ccdec613b9e9a49d554d8",
+      "size": 58763
     },
     {
       "path": "draco/README.md",
-      "sha256": "0694148db91cbc86a569fb925dd1eebdaa6735a5af2aed3fcb50a638e4f31959",
-      "size": 1521
+      "sha256": "8b9d277bf5743f4ce8d85d63c16690071b53f81796e877d4d395af943bde02a0",
+      "size": 1489
     },
     {
       "path": "easter/easterEggReferences-compressed.glb",
@@ -328,13 +328,13 @@
     },
     {
       "path": "favicons/favicon.svg",
-      "sha256": "39f7a27fce12877ca6278d5b08e22c525ad5ee235c4fddfd3206f02c2f832676",
-      "size": 9693
+      "sha256": "cdeb1e0730b6a7b04b7b63a90d52e3af302ff387c7ecf9253e6dbee601e992bf",
+      "size": 9691
     },
     {
       "path": "favicons/site.webmanifest",
-      "sha256": "d8bb4e79f9dfdb99f98c06c0de73d227758be83bbcf863cc1cf93a9349e42de3",
-      "size": 473
+      "sha256": "b0e915e376d7696c95dd1038ba66c8380e80624322f6105c4a4226e6d45c8d4a",
+      "size": 453
     },
     {
       "path": "favicons/web-app-manifest-192x192.png",
@@ -733,83 +733,83 @@
     },
     {
       "path": "ui/close-mini.svg",
-      "sha256": "183af9e7484d6643e1375edf0cf6eb40e8617b72fc2ea35d61d33b4823feb140",
-      "size": 226
+      "sha256": "02fd0296172e5bdca8b5578d8f8ea37ccd9b6737e2e0ed4bf5200b362a446192",
+      "size": 223
     },
     {
       "path": "ui/close.svg",
-      "sha256": "bace2c672f1c1234e135d397161badb1944f21c9f161a95a21c783c6b140079a",
-      "size": 218
+      "sha256": "d29d47ed421f17ac025b312a213cd692c95cdbc293658dd2d4958ae3facad5ac",
+      "size": 215
     },
     {
       "path": "ui/discord.svg",
-      "sha256": "149f65ac4c375a23d6a6257a3d9aee02c20c8f85b747716e01a61051644d8d2c",
-      "size": 1319
+      "sha256": "913351c4a03b44f2d70cf41d97b403d7bdb2c4772f0f1e80442d5b7005628108",
+      "size": 1316
     },
     {
       "path": "ui/egg.svg",
-      "sha256": "2aff034b87d9d3c25142d361d0a80fbcd038243358f72036e1e04493b8750180",
-      "size": 573
+      "sha256": "5726ae0af680717c2c4efcb06f6b9cae375111fc8913a6a8a4b37d4bcfad347b",
+      "size": 570
     },
     {
       "path": "ui/flag-fill.svg",
-      "sha256": "2769dbe728e85221e4003bd7bfd37d7f2b2943b423b43487852bbf6b204681e1",
-      "size": 602
+      "sha256": "b905006bc5304e853cac8b0f3d706b1c99a73f4924145d16a4bdb5c3eceffbd2",
+      "size": 599
     },
     {
       "path": "ui/flag.svg",
-      "sha256": "59f2c2d7f91143d2e0971f18ec38228808020b5ae580a449ec1b91551f8ba86b",
-      "size": 633
+      "sha256": "3a762d6760d39a1e5b5abce491a87e8a2aac02b5149e7d91d5106db1396c7b77",
+      "size": 630
     },
     {
       "path": "ui/gear.svg",
-      "sha256": "5d8553771e14eeec52f90243b3929ef944e8a424d5e1ac79150dddaaae8951c8",
-      "size": 1572
+      "sha256": "de7dadffc692fa5e0983eead7565e23e8a0f7b6dfbb97f6e378c901aada33608",
+      "size": 1569
     },
     {
       "path": "ui/home.svg",
-      "sha256": "e75186e5b217177e730971bacb05bd316af8897795cba17f18e386cd50a39120",
-      "size": 862
+      "sha256": "50fc2fa4dcae9de745095518f30e4fc0c0fac5bb4e7ee46a7cfbb07938ee10c1",
+      "size": 859
     },
     {
       "path": "ui/lock.svg",
-      "sha256": "b0c093ff308b1bd09d8c8b06eeaf58e6ba4cd9118618401b83f6fa69a3265e2c",
-      "size": 861
+      "sha256": "8b44833406cae77b766d97eda5c0150ecc21453f02327e0e63500d8fef068521",
+      "size": 858
     },
     {
       "path": "ui/map.svg",
-      "sha256": "2e727e939e2d9543cc9ffbd4f7666d49380c1373f4223c9e9b35ef3b65b59fe8",
-      "size": 1053
+      "sha256": "e143c1357729f0fd83a488b7a1ed1ec912c68c91977921101c89fb173a4ab9a3",
+      "size": 1050
     },
     {
       "path": "ui/medal.svg",
-      "sha256": "ad21fdad95854ee8cd2cd52f84646c8f676b36eebef583683b30160cddb1bb1a",
-      "size": 808
+      "sha256": "fe4fdfbfa7510dacd36afeec175ec6aa871b252b8041b922817a08851648baa8",
+      "size": 805
     },
     {
       "path": "ui/music-note.svg",
-      "sha256": "42d2e23bc06b8b5b174b722478cce0b8f3bb93ab305f71b099219189cef3e5f6",
-      "size": 1107
+      "sha256": "aad655f739df7db421315d158e7332dcff6f14fbb6e2d7b1764397f68423d7d9",
+      "size": 1104
     },
     {
       "path": "ui/question.svg",
-      "sha256": "e41ac16235c7aee74409ccdcc8b9ae0096dfe57511e0585d8596f60c6d8be2a0",
-      "size": 368
+      "sha256": "c86800a142cd684b3c680ebec6b8736942debe6aebd11620813222b66b07af1b",
+      "size": 365
     },
     {
       "path": "ui/remove.svg",
-      "sha256": "7d10bbfe01646f14ce58dfdebedb31e6076c97b18ef50e65872c24c1fe76fce1",
-      "size": 336
+      "sha256": "3fe52a39882ac6b6760de2cf597a60b329eaf811fcd9b328078e429d2ead91d7",
+      "size": 333
     },
     {
       "path": "ui/warning.svg",
-      "sha256": "03bdd50865b0d75bc5d97cf0900c0cd60bccaf0b7c1a321a9381cf39e1afa2da",
-      "size": 402
+      "sha256": "f5aef68e93174f70dfc0d03e620053f767a3630bd1fc1919fd410deaeb499b7d",
+      "size": 399
     },
     {
       "path": "ui/wheel.svg",
-      "sha256": "b7f0f2a49d67782610b1d00be96948cbb02661eb0766c32b8ad919d36ec6e1e1",
-      "size": 2284
+      "sha256": "e7b2c20474e626d00e65d1d76cb15a6d0bb20833addb87db435edc7f4653ff41",
+      "size": 2281
     },
     {
       "path": "vehicle/default-compressed.glb",
@@ -853,8 +853,8 @@
     },
     {
       "path": "draco/gltf/draco_decoder.js",
-      "sha256": "a47cd7c84911c5175bb0511c01ba41ddafb71873fd391f055def514398f5e7c4",
-      "size": 512498
+      "sha256": "8625489da79a805f4f2a7d511c3e52d8b4085608a9d2a4d5f4f9de5db0aea04f",
+      "size": 512465
     },
     {
       "path": "draco/gltf/draco_decoder.wasm",
@@ -863,13 +863,13 @@
     },
     {
       "path": "draco/gltf/draco_encoder.js",
-      "sha256": "aba8d5a277b2f1b5255407f9ce899151ef8ba1f6dde0b2dfac563287f95b5f6e",
-      "size": 954393
+      "sha256": "6d4132d7b68d26d20a43a1ed59ff4b4a694fbaad41b339158db050dbd0e68f56",
+      "size": 954360
     },
     {
       "path": "draco/gltf/draco_wasm_wrapper.js",
-      "sha256": "f3ab54e2feabfe8bd37928b5f400bc10230dcc278c7e70bca5e025f63519d960",
-      "size": 58572
+      "sha256": "8bb2952d2ba7d67e1414f8df819410cb0434a666be53f671fff75f68843d76f6",
+      "size": 58456
     },
     {
       "path": "lab/images/attractors-mini.ktx",
@@ -1613,8 +1613,8 @@
     },
     {
       "path": "sounds/musics/license.md",
-      "sha256": "a19d58aaab15c4d0019e569d1c073d1b5286fdd37dbeee7a58a7d1ae76045ae1",
-      "size": 7167
+      "sha256": "6d489af6292662d9e36d34ce49423784984a5f6e41d7b58f49b01264df59fa03",
+      "size": 7047
     },
     {
       "path": "sounds/musics/Sudo.mp3",
@@ -1908,8 +1908,8 @@
     },
     {
       "path": "ui/achievements/check.svg",
-      "sha256": "de25a263861d753fc88648a954c166f0e87951fc708045a794f1c83c71c6bb9b",
-      "size": 987
+      "sha256": "2e7f0eefbe3a85a8661c6e60023a688f5e5f91e5973ab9f0a300fc93b795c82e",
+      "size": 984
     },
     {
       "path": "ui/actions/actions-icon-arrow.png",
@@ -1943,13 +1943,13 @@
     },
     {
       "path": "ui/audio/audioOff.svg",
-      "sha256": "cee70e8a934de91b67a8edf85183f22273c24eb28eda4d47083e13043bbfb053",
-      "size": 531
+      "sha256": "3e0083bab69c19a1aa3d71866c86bcb9b6be1fb3f067d01af1a2d45b412af0fb",
+      "size": 528
     },
     {
       "path": "ui/audio/audioOn.svg",
-      "sha256": "2d038e3b0b0d56c6cf04635b8ce791dc1c6eef40ce1e8e92c605c86b8111d2ff",
-      "size": 547
+      "sha256": "7641d783979da4535499b2c72383b3e6db329e308351649a8e1d1c067990aee1",
+      "size": 544
     },
     {
       "path": "ui/controls/gamepad-circle.png",
@@ -1993,18 +1993,18 @@
     },
     {
       "path": "ui/controls/gamepad.svg",
-      "sha256": "58a17ef8b2f2849c01b957a40e5ea418a45d1beb4af2dafdee47b5089b46853e",
-      "size": 1821
+      "sha256": "5c7de56b866e81d7e4dbeb063f6c17770050e11d1d74000911e0e637229ebdaf",
+      "size": 1811
     },
     {
       "path": "ui/controls/mouse-keyboard.svg",
-      "sha256": "0b1fab2325c68da7cb18c4ee5c41ebac0217ef4d2aa976af9caccffa689298ad",
-      "size": 1616
+      "sha256": "78a8bfc3799d7ff829fa432bc3f4e040b779d1f1bb203ff31f6dff4279c7f702",
+      "size": 1613
     },
     {
       "path": "ui/controls/touch.svg",
-      "sha256": "07382dbbc284e73c491743dffc51c45263f2f040c1f49deec56e55a998c65414",
-      "size": 587
+      "sha256": "b9393c51317770ef795314c67817a8932dafd161d51de1f697a8800e75c7d243",
+      "size": 584
     },
     {
       "path": "ui/flags/ad.png",
@@ -4708,13 +4708,13 @@
     },
     {
       "path": "ui/whispers/submitIcon.svg",
-      "sha256": "434be37782bf4a8eb08f087ff035cb0c7ef88e12e3c31f6ca0a5d810391b3a1e",
-      "size": 1159
+      "sha256": "88cba2cc2fa3cd8f3dbdc5d6e824ae1b3123f981caf9643f4ae022605db8e2fc",
+      "size": 1155
     },
     {
       "path": "ui/whispers/whisper-fill.svg",
-      "sha256": "4589d4d2688d2714516efff35a77041a95703103067f2bed002d7c49a65bd40a",
-      "size": 713
+      "sha256": "1b7b1485a3f2a085cb3f2d575e2f8e5906c44051d8921446863ca2f67198aebd",
+      "size": 710
     },
     {
       "path": "ui/achievements/rewards/abyssal.png",
