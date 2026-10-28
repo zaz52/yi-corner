@@ -93,6 +93,7 @@ export class Game
         this.modals = new Modals()
         this.menu = new Menu()
         this.rendering = new Rendering()
+        window.__yiBootStatus?.('正在初始化 3D 渲染…')
         await this.rendering.setRenderer()
 
         const compressed = !!import.meta.env.VITE_COMPRESSED
@@ -101,6 +102,7 @@ export class Game
         const compressedTextureExtension = compressed ? 'ktx' : 'png'
 
         const cb = '?cb=1'
+        window.__yiBootStatus?.('正在加载场景资源…')
         this.resources = await this.resourcesLoader.load([
             [ 'respawnsReferencesModel',    `respawns/respawnsReferences${compressedModelSuffix}.glb${cb}`, 'gltf' ],
             [ 'behindTheSceneStarsTexture', `behindTheScene/stars.${compressedTextureExtension}${cb}`,      compressedTextureFormat, (resource) => { resource.colorSpace = THREE.SRGBColorSpace; resource.minFilter = THREE.NearestFilter; resource.magFilter = THREE.NearestFilter; resource.generateMipmaps = false; resource.wrapS = THREE.RepeatWrapping; resource.wrapT = THREE.RepeatWrapping; } ],
@@ -200,6 +202,7 @@ export class Game
         this.world.step(1)
         this.overlay = new Overlay()
         this.yiCorner = new YiCorner(this)
+        window.__yiBootDone?.()
 
         // Pre-render if quality high
         if(this.quality.level === 0 && this.rendering.renderer.backend.isWebGPUBackend)

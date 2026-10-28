@@ -29,6 +29,13 @@
     
     <link rel="stylesheet" href="./style/index.styl">
 
+    <style>
+    #yi-boot{position:fixed;inset:0;z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;background:#2b123d;color:#fff3e4;font-family:system-ui,sans-serif;text-align:center;padding:24px}
+    #yi-boot .yi-boot-title{font-size:22px;font-weight:700}
+    #yi-boot .yi-boot-status{font-size:14px;opacity:.85;max-width:340px;line-height:1.6}
+    #yi-boot .yi-boot-error{font-size:13px;line-height:1.6;color:#ffc18b;max-width:340px;white-space:pre-wrap;word-break:break-word}
+    </style>
+
     <link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/favicons/favicon.svg" loading="lazy" />
     <link rel="shortcut icon" href="/favicons/favicon.ico" />
@@ -43,6 +50,12 @@
     
 </head>
 <body>
+
+    <div id="yi-boot">
+        <div class="yi-boot-title">正在加载小世界…</div>
+        <div class="yi-boot-status" id="yi-boot-status">正在准备 3D 场景，首次加载需要下载场景资源，请稍候…</div>
+        <div class="yi-boot-error" id="yi-boot-error" hidden></div>
+    </div>
 
     <div class="js-fonts-loader fonts-loader">
         <div class="font nunito" data-font="400 20px Nunito"> </div>
@@ -812,6 +825,37 @@
 
     </div>
 
+    <script>
+    (function () {
+        function showError(msg) {
+            var box = document.getElementById('yi-boot');
+            var el = document.getElementById('yi-boot-error');
+            var st = document.getElementById('yi-boot-status');
+            if (!box || !el) return;
+            box.style.display = 'flex';
+            el.hidden = false;
+            el.textContent = '加载失败：' + msg + '\n请换个浏览器（Chrome / Safari）再试试，或先去经典首页看看。';
+            if (st) st.textContent = '小世界没能启动';
+        }
+        window.__yiBootError = showError;
+        window.__yiBootStatus = function (msg) {
+            var st = document.getElementById('yi-boot-status');
+            if (st) st.textContent = msg;
+        };
+        window.__yiBootDone = function () {
+            var box = document.getElementById('yi-boot');
+            if (box) box.style.display = 'none';
+        };
+        window.addEventListener('error', function (e) {
+            if (e.message) showError(e.message);
+        }, true);
+        window.addEventListener('unhandledrejection', function (e) {
+            var r = e.reason;
+            var msg = (r && r.message) ? r.message : String(r);
+            showError(msg);
+        });
+    })();
+    </script>
     <script type="module" src="./index.js"></script>
 </body>
 </html>

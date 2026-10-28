@@ -41,14 +41,14 @@ export class Rendering
             canvas: this.game.canvasElement,
             powerPreference: 'high-performance',
             forceWebGL: false,
-            antialias: this.game.viewport.pixelRatio < 2
+            antialias: !this.game.viewport.isMobile && this.game.viewport.pixelRatio < 2
         })
         this.renderer.setSize(this.game.viewport.width, this.game.viewport.height)
         this.renderer.setPixelRatio(this.game.viewport.pixelRatio)
         this.renderer.sortObjects = false
 
         this.renderer.domElement.classList.add('experience')
-        this.renderer.shadowMap.enabled = true
+        this.renderer.shadowMap.enabled = !this.game.viewport.isMobile
         // this.renderer.shadowMap.type = THREE.PCFSoftShadowMap
         this.renderer.setOpaqueSort((a, b) =>
         {
