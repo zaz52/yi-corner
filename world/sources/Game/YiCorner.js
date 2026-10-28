@@ -115,7 +115,7 @@ export class YiCorner {
 
     ui() {
         const hud = document.createElement('div'); hud.className = 'yi-hud'
-        hud.innerHTML = `<div class="yi-brand">壹隅<small>唯一的小世界</small></div><nav aria-label="目的地"><button data-destination="shop">AI 代充小店</button><button data-destination="cinema">苍柏影院</button><button data-destination="directory:全部">全部网站</button></nav><div class="yi-guide">WASD / 方向键 · 驾驶　空格 · 跳跃　R · 回到道路　M · 地图</div><button class="yi-nearby" hidden></button><div class="yi-credit"><a href="../?view=classic">经典首页</a> · 场景与驾驶系统：Bruno Simon · MIT 开源许可</div>`
+        hud.innerHTML = `<div class="yi-brand">壹隅<small>唯一的小世界</small></div><nav aria-label="目的地"><button data-destination="shop">AI 代充小店</button><button data-destination="cinema">苍柏影院</button><button data-destination="beggar">赛博要饭</button><button data-destination="directory:全部">全部网站</button></nav><div class="yi-guide">WASD / 方向键 · 驾驶　空格 · 跳跃　R · 回到道路　M · 地图</div><button class="yi-nearby" hidden></button><div class="yi-credit"><a href="../?view=classic">经典首页</a> · 场景与驾驶系统：Bruno Simon · MIT 开源许可</div>`
         document.body.append(hud)
         hud.querySelectorAll('[data-destination]').forEach(button => button.addEventListener('click', () => this.open(button.dataset.destination)))
         this.nearby = hud.querySelector('.yi-nearby')

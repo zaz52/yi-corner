@@ -381,5 +381,14 @@
     "url": "https://qianyuwing.com/",
     "category": "实用小工具",
     "mine": false
+  },
+  {
+    "id": "beggar",
+    "title": "赛博要饭",
+    "url": "https://newbeggar.com/cangbaic",
+    "description": "赛博要饭：行行好，赏口饭吃，扫码一毛也是爱。",
+    "category": "我的作品",
+    "mine": true,
+    "source": "用户指定"
   }
 ]
