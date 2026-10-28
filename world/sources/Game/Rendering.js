@@ -89,7 +89,11 @@ export class Rendering
         // Quality
         const qualityChange = (level) =>
         {
-            if(level === 0)
+            if(this.game.viewport.isMobile)
+            {
+                this.postProcessing.outputNode = scenePassColor
+            }
+            else if(level === 0)
             {
                 this.postProcessing.outputNode = this.cheapDOFPass.add(this.bloomPass)
             }
