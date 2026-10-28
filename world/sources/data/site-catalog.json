@@ -1,0 +1,353 @@
+[
+  {
+    "id": "shop",
+    "title": "AI 代充小店",
+    "url": "https://999.lsrai.shop/",
+    "description": "AI 服务与订阅，进入小店查看。",
+    "category": "我的作品",
+    "mine": true,
+    "source": "用户指定"
+  },
+  {
+    "id": "cinema",
+    "title": "苍柏影院",
+    "url": "https://weiyi.indevs.in",
+    "description": "苍柏 CINEMA：Cloudflare Workers + D1 影视搜索、授权源管理与在线播放网站",
+    "category": "我的作品",
+    "mine": true,
+    "source": "yi-corner 源码"
+  },
+  {
+    "id": "site-2",
+    "title": "知图 · 知识图书馆",
+    "url": "https://zhitu.weiyi.indevs.in",
+    "description": "知图 Knowledge Atlas：现代数字知识图书馆与交互式历史知识图谱",
+    "category": "我的作品",
+    "mine": true,
+    "source": "yi-corner 源码"
+  },
+  {
+    "id": "site-3",
+    "title": "乾坤之道",
+    "url": "https://suangua.weiyiai.top/",
+    "description": "融合周易起卦、八字、奇门、六爻与 AI 解读的东方问事工具台，围绕问题、术法和结果生成结构化洞察。",
+    "category": "我的作品",
+    "mine": true,
+    "source": "yi-corner 源码"
+  },
+  {
+    "id": "site-4",
+    "title": "魔方简历",
+    "url": "https://magic-resume-weiyi.netlify.app/",
+    "description": "免费、隐私优先的在线简历编辑器，支持 AI 润色、语法检查、本地数据存储和 PDF / JSON 导出。",
+    "category": "我的作品",
+    "mine": true,
+    "source": "yi-corner 源码"
+  },
+  {
+    "id": "site-5",
+    "title": "演示文稿大师",
+    "url": "https://ppt-master-weiyi.netlify.app/",
+    "description": "把 PDF、DOCX、URL 或 Markdown 转成真正可编辑的 PowerPoint，保留原生形状、图表、讲稿和模板风格。",
+    "category": "我的作品",
+    "mine": true,
+    "source": "yi-corner 源码"
+  },
+  {
+    "id": "site-6",
+    "title": "银龄守护",
+    "url": "https://elder-health.netlify.app/#/pages/index/index",
+    "description": "面向老年健康管理的移动端体验，整合饮水、睡眠、心率、药箱、语音、电台、AI 晨报和报告分析入口。",
+    "category": "我的作品",
+    "mine": true,
+    "source": "yi-corner 源码"
+  },
+  {
+    "id": "site-7",
+    "title": "虚拟资源库",
+    "url": "https://pan.quark.cn/s/bc839cf401af#/list/share",
+    "description": "沉淀学习资源、设计素材、工具文件和项目资料的云端入口，方便集中整理、检索和分享。",
+    "category": "我的作品",
+    "mine": true,
+    "source": "yi-corner 源码"
+  },
+  {
+    "id": "site-8",
+    "title": "壹隅 · 个人网站",
+    "url": "https://github.com/zaz52/yi-corner",
+    "description": "本站——基于 React + Tailwind 的个人网站，灵动流体浅色 UI 与 60fps 微交互设计系统。",
+    "category": "我的作品",
+    "mine": true,
+    "source": "yi-corner 源码"
+  },
+  {
+    "id": "site-9",
+    "title": "闲鱼超级管家",
+    "url": "https://github.com/zaz52/xianyu-super-butler",
+    "description": "基于闲鱼自动回复系统的二次开发版本，重点重构前端 UI 和使用体验，让自动化管理工具更现代、更清晰。",
+    "category": "我的作品",
+    "mine": true,
+    "source": "yi-corner 源码"
+  },
+  {
+    "id": "site-10",
+    "title": "小说工作台",
+    "url": "https://github.com/zaz52/wei-yi",
+    "description": "面向小说创作流程的工作台项目，用于沉淀写作、设定、素材和内容生产相关能力。",
+    "category": "我的作品",
+    "mine": true,
+    "source": "yi-corner 源码"
+  },
+  {
+    "id": "site-11",
+    "title": "个人形象顾问",
+    "url": "https://github.com/zaz52/personal-style-advisor",
+    "description": "用于个人穿搭、眼镜、色彩诊断、发型和形象升级报告的 Agent skill 与提示词集合。",
+    "category": "我的作品",
+    "mine": true,
+    "source": "yi-corner 源码"
+  },
+  {
+    "id": "site-12",
+    "title": "智能体信息助手",
+    "url": "https://github.com/zaz52/Agent-Reach",
+    "description": "为 AI Agent 提供跨平台读取和搜索能力，覆盖 Twitter、Reddit、YouTube、GitHub、Bilibili、小红书等公开信息源。",
+    "category": "我的作品",
+    "mine": true,
+    "source": "yi-corner 源码"
+  },
+  {
+    "id": "site-13",
+    "title": "闲鱼自动回复管理系统",
+    "url": "https://github.com/zaz52/xianyu-auto-reply",
+    "description": "面向闲鱼平台的自动化客服与虚拟商品流程系统，覆盖消息处理、自动回复、自动发货、评价和商品维护。",
+    "category": "历史归档",
+    "mine": true,
+    "source": "yi-corner 源码"
+  },
+  {
+    "id": "site-14",
+    "title": "人工智能实验项目",
+    "url": "https://github.com/zaz52/GeniusFKoai",
+    "description": "GitHub 上沉淀的 Python 项目，用于记录和整理 AI、自动化或实验性代码能力。",
+    "category": "历史归档",
+    "mine": true,
+    "source": "yi-corner 源码"
+  },
+  {
+    "id": "site-15",
+    "title": "乾坤之道部署脚本",
+    "url": "https://github.com/zaz52/yulesuangua-deploy",
+    "description": "围绕乾坤之道项目沉淀的部署与辅助脚本仓库，方便后续维护算卦相关站点和发布流程。",
+    "category": "历史归档",
+    "mine": true,
+    "source": "yi-corner 源码"
+  },
+  {
+    "id": "site-16",
+    "title": "早期作品集备份",
+    "url": "https://github.com/zaz52/zaz52.github.io",
+    "description": "早期 GitHub Pages 个人网站仓库，作为个人网站迁移过程中的静态部署备份和历史版本。",
+    "category": "历史归档",
+    "mine": true,
+    "source": "yi-corner 源码"
+  },
+  {
+    "id": "site-17",
+    "title": "乾坤之道源码",
+    "url": "https://github.com/zaz52/yulesuangua",
+    "description": "对自己的运势婚姻的测试",
+    "category": "历史归档",
+    "mine": true,
+    "source": "yi-corner 源码"
+  },
+  {
+    "id": "site-18",
+    "title": "个人网站源码",
+    "url": "https://github.com/zaz52/-",
+    "description": "当前个人网站的 GitHub 仓库，包含首页、作品详情、后台管理、访问统计、SEO 分享卡片和 Cloudflare Worker 部署配置。",
+    "category": "我的作品",
+    "mine": true,
+    "source": "原站作品接口"
+  },
+  {
+    "id": "site-19",
+    "title": "电商图片工作流",
+    "url": "https://github.com/zaz52/pdd-ecommerce-workflow",
+    "description": "商品主图/Banner/详情页 AI 生成",
+    "category": "我的作品",
+    "mine": true,
+    "source": "原站工具箱"
+  },
+  {
+    "id": "site-20",
+    "title": "论文翻译工具",
+    "url": "https://github.com/PDFMathTranslate/PDFMathTranslate",
+    "description": "PDF 论文一键翻译，公式表格不乱码",
+    "category": "AI 效率",
+    "mine": false,
+    "source": "原站工具箱"
+  },
+  {
+    "id": "site-21",
+    "title": "演示文稿生成工具",
+    "url": "https://github.com/hugohe3/ppt-master",
+    "description": "输入文档或主题，AI 生成原生 PPT",
+    "category": "AI 效率",
+    "mine": false,
+    "source": "原站工具箱"
+  },
+  {
+    "id": "site-22",
+    "title": "命令行办公套件",
+    "url": "https://github.com/iOfficeAI/OfficeCLI",
+    "description": "命令行里的 Office 套件，极客范",
+    "category": "AI 效率",
+    "mine": false,
+    "source": "原站工具箱"
+  },
+  {
+    "id": "site-23",
+    "title": "ChatGPT 中文调教指南",
+    "url": "https://github.com/PlexPt/awesome-chatgpt-prompts-zh",
+    "description": "各种场景的提示词玩法，学让 AI 听话",
+    "category": "AI 效率",
+    "mine": false,
+    "source": "原站工具箱"
+  },
+  {
+    "id": "site-24",
+    "title": "中文表达润色",
+    "url": "https://github.com/op7418/Humanizer-zh",
+    "description": "消除文本中的 AI 痕迹，改得更像人写的",
+    "category": "AI 写作",
+    "mine": false,
+    "source": "原站工具箱"
+  },
+  {
+    "id": "site-25",
+    "title": "文本自然化工具",
+    "url": "https://github.com/hylarucoder/ai-flavor-remover",
+    "description": "一键去除 AI 味，文字更自然",
+    "category": "AI 写作",
+    "mine": false,
+    "source": "原站工具箱"
+  },
+  {
+    "id": "site-26",
+    "title": "写作风格助手",
+    "url": "https://github.com/larashero3-dotcom/writing-dna-skill",
+    "description": "蒸馏复刻任意写作风格，Agent 技能",
+    "category": "AI 写作",
+    "mine": false,
+    "source": "原站工具箱"
+  },
+  {
+    "id": "site-27",
+    "title": "内容创作台",
+    "url": "https://x.weiyi.indevs.in/",
+    "description": "中文内容创作工作台，实时创作",
+    "category": "我的作品",
+    "mine": true,
+    "source": "原站工具箱"
+  },
+  {
+    "id": "site-28",
+    "title": "抖音下载器",
+    "url": "https://github.com/jiji262/douyin-downloader",
+    "description": "批量下载抖音视频，无水印",
+    "category": "内容创作",
+    "mine": false,
+    "source": "原站工具箱"
+  },
+  {
+    "id": "site-29",
+    "title": "多平台发布助手",
+    "url": "https://github.com/leaperone/MultiPost-Extension",
+    "description": "一篇文章，多平台一键发布",
+    "category": "内容创作",
+    "mine": false,
+    "source": "原站工具箱"
+  },
+  {
+    "id": "site-30",
+    "title": "图文卡片工具",
+    "url": "https://github.com/larashero3-dotcom/lieflat-cards",
+    "description": "把文字变成克制编辑感的图文卡片",
+    "category": "内容创作",
+    "mine": false,
+    "source": "原站工具箱"
+  },
+  {
+    "id": "site-31",
+    "title": "内容监控中心",
+    "url": "https://github.com/3441293738/creatorhub",
+    "description": "多平台内容监控采集，一个面板管起",
+    "category": "内容创作",
+    "mine": false,
+    "source": "原站工具箱"
+  },
+  {
+    "id": "site-32",
+    "title": "唯影导航",
+    "url": "https://nav.weiyi.indevs.in/",
+    "description": "全类型视频网站导航，143 个平台",
+    "category": "我的作品",
+    "mine": true,
+    "source": "原站工具箱"
+  },
+  {
+    "id": "site-33",
+    "title": "洛雪音乐播放器",
+    "url": "https://github.com/lyswhut/lx-music-desktop",
+    "description": "免费开源音乐播放器，全网搜歌随便听",
+    "category": "影音娱乐",
+    "mine": false,
+    "source": "原站工具箱"
+  },
+  {
+    "id": "site-34",
+    "title": "开源影视播放器",
+    "url": "https://github.com/LibreSpark/LibreTV",
+    "description": "一分钟搭建自己的影视站",
+    "category": "影音娱乐",
+    "mine": false,
+    "source": "原站工具箱"
+  },
+  {
+    "id": "site-35",
+    "title": "追剧资源指南",
+    "url": "https://github.com/laoma528/awesome-zhuiju-free",
+    "description": "免费无广告追剧资源，人工精选",
+    "category": "影音娱乐",
+    "mine": false,
+    "source": "原站工具箱"
+  },
+  {
+    "id": "site-36",
+    "title": "闲鱼自动回复",
+    "url": "https://github.com/zhinianboke/xianyu-auto-reply",
+    "description": "闲鱼客服自动回复系统，解放双手",
+    "category": "实用小工具",
+    "mine": false,
+    "source": "原站工具箱"
+  },
+  {
+    "id": "site-37",
+    "title": "微信 AI 记忆库",
+    "url": "https://github.com/ikevss/wechat-ai-memory",
+    "description": "微信聊天记录筛选归档，可追溯",
+    "category": "实用小工具",
+    "mine": false,
+    "source": "原站工具箱"
+  },
+  {
+    "id": "site-38",
+    "title": "空间动态备份",
+    "url": "https://github.com/Gaoshu705/QzoneArchive",
+    "description": "QQ 空间历史动态照片视频一键备份",
+    "category": "实用小工具",
+    "mine": false,
+    "source": "原站工具箱"
+  }
+]

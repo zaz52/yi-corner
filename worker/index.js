@@ -587,6 +587,8 @@ const handleApi = async (request, env, url, ctx) => {
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
+    if (url.pathname.startsWith('/world/')) return env.ASSETS.fetch(request);
+    if (url.pathname === '/world') return Response.redirect(new URL('/world/', url).toString(), 302);
     if (url.pathname === '/robots.txt') return renderRobots();
     if (url.pathname === '/sitemap.xml') return renderSitemap(env);
     if (url.pathname.startsWith('/api/')) return handleApi(request, env, url, ctx);

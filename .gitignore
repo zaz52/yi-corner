@@ -7,3 +7,8 @@ dist
 
 # Local Netlify folder
 .netlify
+
+# Downloaded, checksum-verified scene assets and build cache
+world/static/
+world/dist/
+world/.env*

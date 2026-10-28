@@ -1,0 +1,26 @@
+[
+  {
+    "href": "https://github.com/zaz52",
+    "icon": "github",
+    "label": "GitHub",
+    "value": "github.com/zaz52"
+  },
+  {
+    "href": "https://x.com/Cangbaic",
+    "icon": "sparkles",
+    "label": "X",
+    "value": "@Cangbaic"
+  },
+  {
+    "href": "https://t.me/CANGBAIC",
+    "icon": "send",
+    "label": "Telegram",
+    "value": "@CANGBAIC"
+  },
+  {
+    "href": "https://wa.me/447343121534",
+    "icon": "phone",
+    "label": "WhatsApp",
+    "value": "+44 7343 121534"
+  }
+]
