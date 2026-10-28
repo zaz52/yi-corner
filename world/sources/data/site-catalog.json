@@ -349,5 +349,37 @@
     "category": "实用小工具",
     "mine": false,
     "source": "原站工具箱"
+  },
+  {
+    "id": "shared-apple-id",
+    "title": "苹果共享 ID",
+    "description": "原站收录的共享 Apple ID 资源入口。",
+    "url": "https://id.qianyuwing.com/",
+    "category": "实用小工具",
+    "mine": false
+  },
+  {
+    "id": "lossless-music",
+    "title": "无损音乐下载",
+    "description": "原站收录的无损音乐搜索与下载入口。",
+    "url": "https://flac.music.hi.cn/",
+    "category": "影音娱乐",
+    "mine": false
+  },
+  {
+    "id": "zhiwei",
+    "title": "知微工作台",
+    "description": "小学科学探究备课工作台，教案设计入口。",
+    "url": "https://zhiwei.weiyi.indevs.in/",
+    "category": "我的作品",
+    "mine": true
+  },
+  {
+    "id": "qianyuwing",
+    "title": "芊羽 Wing 导航",
+    "description": "原站页脚收录的币圈工具与交易学习导航。",
+    "url": "https://qianyuwing.com/",
+    "category": "实用小工具",
+    "mine": false
   }
 ]

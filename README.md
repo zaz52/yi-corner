@@ -4,7 +4,7 @@ Songyu 的个人网站 —— 作品、工具与日常。[weiyiai.top](https://w
 
 ## 三维首页（2026-10-28）
 
-首页进入 `/world/` 三维世界，AI 代充小店和苍柏影院为主要入口，全部网站目录收录 39 个网址。`/?view=classic` 返回经典首页，原有 Worker API 和页面路由保留。
+首页进入 `/world/` 三维世界，AI 代充小店和苍柏影院为主要入口，全部网站目录收录 43 个网址。`/?view=classic` 返回经典首页，原有 Worker API 和页面路由保留。
 
 - 世界源码：`world/sources/`；网址配置：`world/sources/data/site-catalog.json`。
 - `npm run build` 构建经典页面和三维世界。首次构建下载固定上游版本的 955 个素材文件，逐个校验 SHA-256；发布素材约 66.7 MB，WAV 母带不参与发布。

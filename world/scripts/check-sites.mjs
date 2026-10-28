@@ -6,6 +6,14 @@ const catalog = JSON.parse(fs.readFileSync(new URL('sources/data/site-catalog.js
 assert.equal(new Set(catalog.map(site => site.id)).size, catalog.length)
 const urls = catalog.filter(site => site.url).map(site => site.url.replace(/\/$/, ''))
 assert.equal(new Set(urls).size, urls.length)
+const homepage = new URL('../src/App.tsx', root)
+if (fs.existsSync(homepage)) {
+    const links = [...fs.readFileSync(homepage, 'utf8').matchAll(/https:\/\/[^"'`\s<>]+/g)].map(match => match[0])
+    for (const url of new Set(links)) {
+        if (new URL(url).hostname === 'x.com') continue // Contact links live in site-contacts.json.
+        assert.ok(urls.includes(url.replace(/\/$/, '')), `Homepage link missing from directory: ${url}`)
+    }
+}
 for (const site of catalog) {
     assert.match(site.title, /[\u4e00-\u9fff]/)
     if (site.url) assert.equal(new URL(site.url).protocol, 'https:')
