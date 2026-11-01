@@ -18,6 +18,16 @@ html {
   transform: none;
 }
 
+/* 作品视觉块：入场时轻微透视倾斜，滚到位后回正 */
+.reveal .work-visual {
+  transform: perspective(900px) rotateY(-6deg) rotateX(4deg);
+  transition: transform 800ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.is-visible .work-visual {
+  transform: none;
+}
+
 /* 大字金句：逐词点亮 */
 .tag-word {
   opacity: 0.3;
@@ -28,57 +38,57 @@ html {
   opacity: 1;
 }
 
-/* 跑马灯：匀速循环才能无缝衔接 */
-.marquee-track {
-  animation: yi-marquee 28s linear infinite;
+/* 首屏插接件：漂浮，只动 transform */
+.cross-float-a {
+  animation: yi-cross-a 7s ease-in-out infinite alternate;
 }
 
-@keyframes yi-marquee {
+.cross-float-b {
+  animation: yi-cross-b 9s ease-in-out infinite alternate;
+}
+
+.cross-float-c {
+  animation: yi-cross-c 8s ease-in-out infinite alternate;
+}
+
+@keyframes yi-cross-a {
   from {
-    transform: translateX(0);
+    transform: translate(0, 0);
   }
   to {
-    transform: translateX(-50%);
+    transform: translate(-10px, 14px);
   }
 }
 
-/* 主视觉漂浮色块：只动 transform */
-.blob-a {
-  animation: yi-float-a 9s ease-in-out infinite alternate;
-}
-
-.blob-b {
-  animation: yi-float-b 11s ease-in-out infinite alternate;
-}
-
-.blob-c {
-  animation: yi-float-c 10s ease-in-out infinite alternate;
-}
-
-@keyframes yi-float-a {
+@keyframes yi-cross-b {
   from {
-    transform: translate(0, 0) scale(1);
+    transform: translate(0, 0);
   }
   to {
-    transform: translate(-24px, 32px) scale(1.12);
+    transform: translate(12px, -10px);
   }
 }
 
-@keyframes yi-float-b {
+@keyframes yi-cross-c {
   from {
-    transform: translate(0, 0) scale(1);
+    transform: translate(0, 0);
   }
   to {
-    transform: translate(28px, -20px) scale(0.92);
+    transform: translate(-8px, -12px);
   }
 }
 
-@keyframes yi-float-c {
+/* 波浪带：缓慢漂移，只动 transform */
+.ribbon-float {
+  animation: yi-ribbon 12s ease-in-out infinite alternate;
+}
+
+@keyframes yi-ribbon {
   from {
-    transform: translate(0, 0) scale(1);
+    transform: translateY(-50%) rotate(-1deg);
   }
   to {
-    transform: translate(-16px, -28px) scale(1.08);
+    transform: translateY(-50%) rotate(1deg) translateX(2%);
   }
 }
 
@@ -107,15 +117,20 @@ html {
     transition: none;
   }
 
+  .reveal .work-visual {
+    transform: none;
+    transition: none;
+  }
+
   .tag-word {
     opacity: 1;
     transition: none;
   }
 
-  .marquee-track,
-  .blob-a,
-  .blob-b,
-  .blob-c {
+  .cross-float-a,
+  .cross-float-b,
+  .cross-float-c,
+  .ribbon-float {
     animation: none;
   }
 
