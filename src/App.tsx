@@ -235,6 +235,36 @@ function Ribbon() {
 function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  /* 滚动联动：元素随滚动视差移动，只写 transform */
+  useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    let raf = 0;
+    const update = () => {
+      raf = 0;
+      const vh = window.innerHeight;
+      document.querySelectorAll<HTMLElement>('[data-parallax]').forEach((el) => {
+        const factor = parseFloat(el.dataset.parallax || '0');
+        const rot = parseFloat(el.dataset.parallaxRotate || '0');
+        const rect = el.getBoundingClientRect();
+        const offset = rect.top + rect.height / 2 - vh / 2;
+        const y = offset * factor;
+        const r = rot ? Math.max(-4, Math.min(4, offset * rot)) : 0;
+        el.style.transform = `translate3d(0, ${y.toFixed(1)}px, 0)${r ? ` rotate(${r.toFixed(2)}deg)` : ''}`;
+      });
+    };
+    const onScroll = () => {
+      if (!raf) raf = requestAnimationFrame(update);
+    };
+    update();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('resize', onScroll);
+      if (raf) cancelAnimationFrame(raf);
+    };
+  }, []);
+
   return (
     <div className="min-h-screen bg-[#EDF0F3] text-[#0A0A0C] antialiased">
       <a
@@ -310,6 +340,7 @@ function Home() {
             </p>
           </div>
           <Reveal className="mt-10">
+            <div data-parallax="0.12">
             <div className="work-visual relative aspect-[4/3] overflow-hidden rounded-[20px] bg-[#0A0A0C] md:aspect-[16/8]">
               <Cross
                 bar="bg-[linear-gradient(180deg,#5a68ff,#1e2bff)]"
@@ -339,6 +370,7 @@ function Home() {
               <span aria-hidden className="absolute top-4 left-6 text-lg text-white/40">+</span>
               <span aria-hidden className="absolute right-6 bottom-4 text-lg text-white/40">+</span>
             </div>
+            </div>
           </Reveal>
           <div className="flex items-center justify-center gap-6 py-6 text-xs font-bold tracking-[0.2em] text-black/50 uppercase">
             <span aria-hidden>+</span>
@@ -350,10 +382,12 @@ function Home() {
         {/* 理念大字 */}
         <section className="px-4 py-20 md:px-[5%] md:py-28">
           <Reveal>
+            <div data-parallax="0.06">
             <BigPhrase
               words={['好玩，', '才值得被记住。']}
               className="text-[clamp(3rem,9vw,8.5rem)] leading-[1.05]"
             />
+            </div>
           </Reveal>
         </section>
 
@@ -455,17 +489,19 @@ function Home() {
         </section>
 
         {/* 宝蓝到青色的波浪带 */}
-        <div aria-hidden className="relative h-40 overflow-visible md:h-56">
+        <div aria-hidden data-parallax="-0.08" data-parallax-rotate="0.008" className="relative h-40 overflow-visible md:h-56">
           <Ribbon />
         </div>
 
         {/* 理念大字二 */}
         <section className="px-4 py-20 md:px-[5%] md:py-28">
           <Reveal>
+            <div data-parallax="0.06">
             <BigPhrase
               words={['有用的东西，', '也该长得好看。']}
               className="text-[clamp(3rem,9vw,8.5rem)] leading-[1.05]"
             />
+            </div>
           </Reveal>
         </section>
 
