@@ -1,5 +1,16 @@
 [
   {
+    "name": "knowledge-atlas",
+    "type": "GitHub 开源项目",
+    "desc": "知图 Knowledge Atlas：现代数字知识图书馆与交互式历史知识图谱",
+    "href": "https://zhitu.weiyi.indevs.in",
+    "tags": [
+      "TypeScript"
+    ],
+    "featured": false,
+    "github": "https://github.com/zaz52/knowledge-atlas"
+  },
+  {
     "name": "yi-corner-template",
     "type": "GitHub 开源项目",
     "desc": "GitHub 上的开源项目。",
@@ -18,16 +29,5 @@
     ],
     "featured": false,
     "github": "https://github.com/zaz52/cangbai-cinema"
-  },
-  {
-    "name": "knowledge-atlas",
-    "type": "GitHub 开源项目",
-    "desc": "知图 Knowledge Atlas：现代数字知识图书馆与交互式历史知识图谱",
-    "href": "https://zhitu.weiyi.indevs.in",
-    "tags": [
-      "TypeScript"
-    ],
-    "featured": false,
-    "github": "https://github.com/zaz52/knowledge-atlas"
   }
 ]
