@@ -1,1 +1,127 @@
 @import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* 滚动进场：只动 transform 与 opacity，进场一次 */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition:
+    opacity 700ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* 大字金句：逐词点亮 */
+.tag-word {
+  opacity: 0.3;
+  transition: opacity 600ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.tag-word.on {
+  opacity: 1;
+}
+
+/* 跑马灯：匀速循环才能无缝衔接 */
+.marquee-track {
+  animation: yi-marquee 28s linear infinite;
+}
+
+@keyframes yi-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* 主视觉漂浮色块：只动 transform */
+.blob-a {
+  animation: yi-float-a 9s ease-in-out infinite alternate;
+}
+
+.blob-b {
+  animation: yi-float-b 11s ease-in-out infinite alternate;
+}
+
+.blob-c {
+  animation: yi-float-c 10s ease-in-out infinite alternate;
+}
+
+@keyframes yi-float-a {
+  from {
+    transform: translate(0, 0) scale(1);
+  }
+  to {
+    transform: translate(-24px, 32px) scale(1.12);
+  }
+}
+
+@keyframes yi-float-b {
+  from {
+    transform: translate(0, 0) scale(1);
+  }
+  to {
+    transform: translate(28px, -20px) scale(0.92);
+  }
+}
+
+@keyframes yi-float-c {
+  from {
+    transform: translate(0, 0) scale(1);
+  }
+  to {
+    transform: translate(-16px, -28px) scale(1.08);
+  }
+}
+
+/* 移动端菜单链接：逐个上浮淡入 */
+.menu-link {
+  opacity: 0;
+  transform: translateY(24px);
+  animation: yi-menu-in 500ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes yi-menu-in {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .tag-word {
+    opacity: 1;
+    transition: none;
+  }
+
+  .marquee-track,
+  .blob-a,
+  .blob-b,
+  .blob-c {
+    animation: none;
+  }
+
+  .menu-link {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+}
