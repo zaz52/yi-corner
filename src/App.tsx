@@ -1,12 +1,14 @@
 import { useEffect, useRef, useState } from 'react';
-import type { CSSProperties, ReactNode } from 'react';
+import type { ReactNode } from 'react';
 import Lenis from 'lenis';
 import {
   ArrowUpRight,
   Github,
+  Play,
   X,
 } from 'lucide-react';
 import ClassicApp from './ClassicApp';
+import { cinemaPoster } from './data/cinemaPoster';
 import { defaultProjects as projects } from './data/siteProjects';
 import { defaultContacts as contacts } from './data/siteContacts';
 import { toolbox } from './data/toolbox';
@@ -172,28 +174,6 @@ function BigPhrase({ words, className = '' }: { words: string[]; className?: str
         </span>
       ))}
     </p>
-  );
-}
-
-/* 首屏黑色视觉块里的光泽插接件：纯 CSS 画，不用 WebGL */
-function Cross({
-  bar,
-  style,
-  floatClass = 'cross-float-a',
-}: {
-  bar: string;
-  style?: CSSProperties;
-  floatClass?: string;
-}) {
-  return (
-    <div aria-hidden className="absolute" style={style}>
-      <div className={`${floatClass} size-full`}>
-        <div className="relative size-full">
-          <div className={`absolute left-1/2 top-1/2 h-[20%] w-full -translate-x-1/2 -translate-y-1/2 rounded-full shadow-lg ${bar}`} />
-          <div className={`absolute left-1/2 top-1/2 h-full w-[20%] -translate-x-1/2 -translate-y-1/2 rounded-full shadow-lg ${bar}`} />
-        </div>
-      </div>
-    </div>
   );
 }
 
@@ -533,35 +513,28 @@ function Home() {
           </div>
           <Reveal className="mt-10">
             <div data-parallax="0.12">
-            <div className="work-visual relative aspect-[4/3] overflow-hidden rounded-[20px] bg-[#0A0A0C] md:aspect-[16/8]">
-              <Cross
-                bar="bg-[linear-gradient(180deg,#5a68ff,#1e2bff)]"
-                style={{ top: '18%', left: '56%', width: 150, height: 150, transform: 'rotate(18deg)' }}
-                floatClass="cross-float-a"
-              />
-              <Cross
-                bar="bg-[linear-gradient(180deg,#ffffff,#c9c9d1)]"
-                style={{ top: '42%', left: '30%', width: 120, height: 120, transform: 'rotate(-14deg)' }}
-                floatClass="cross-float-b"
-              />
-              <Cross
-                bar="bg-[linear-gradient(180deg,#3a3a42,#0a0a0c)]"
-                style={{ top: '8%', left: '18%', width: 100, height: 100, transform: 'rotate(32deg)' }}
-                floatClass="cross-float-c"
-              />
-              <Cross
-                bar="bg-[linear-gradient(180deg,#5a68ff,#1e2bff)]"
-                style={{ top: '58%', left: '72%', width: 110, height: 110, transform: 'rotate(-24deg)' }}
-                floatClass="cross-float-b"
-              />
-              <Cross
-                bar="bg-[linear-gradient(180deg,#ffffff,#c9c9d1)]"
-                style={{ top: '30%', left: '80%', width: 84, height: 84, transform: 'rotate(40deg)' }}
-                floatClass="cross-float-a"
-              />
-              <span aria-hidden className="absolute top-4 left-6 text-lg text-white/40">+</span>
-              <span aria-hidden className="absolute right-6 bottom-4 text-lg text-white/40">+</span>
-            </div>
+              <a
+                href="https://weiyi.indevs.in"
+                target="_blank"
+                rel="noreferrer"
+                className="work-visual group relative block aspect-[4/3] overflow-hidden rounded-[20px] md:aspect-[16/8]"
+              >
+                <img
+                  src={cinemaPoster}
+                  alt="苍柏影院"
+                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+                <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 text-center">
+                  <span className="grid size-16 place-items-center rounded-full bg-white/15 text-white backdrop-blur-md transition-transform duration-300 group-hover:scale-110">
+                    <Play size={26} className="ml-1" fill="currentColor" />
+                  </span>
+                  <div>
+                    <div className="text-2xl font-bold tracking-tight text-white drop-shadow-lg md:text-4xl">苍柏影院</div>
+                    <div className="mt-1 text-sm text-white/70">点击进入 · 免费观影</div>
+                  </div>
+                </div>
+              </a>
             </div>
           </Reveal>
           <div className="flex items-center justify-center gap-6 py-6 text-xs font-bold tracking-[0.2em] text-black/50 uppercase">

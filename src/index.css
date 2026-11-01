@@ -38,46 +38,6 @@ html {
   opacity: 1;
 }
 
-/* 首屏插接件：漂浮，只动 transform */
-.cross-float-a {
-  animation: yi-cross-a 5.5s ease-in-out infinite alternate;
-}
-
-.cross-float-b {
-  animation: yi-cross-b 6.5s ease-in-out infinite alternate;
-}
-
-.cross-float-c {
-  animation: yi-cross-c 6s ease-in-out infinite alternate;
-}
-
-@keyframes yi-cross-a {
-  from {
-    transform: translate(0, 0) rotate(0deg);
-  }
-  to {
-    transform: translate(-18px, 20px) rotate(-6deg);
-  }
-}
-
-@keyframes yi-cross-b {
-  from {
-    transform: translate(0, 0) rotate(0deg);
-  }
-  to {
-    transform: translate(20px, -16px) rotate(5deg);
-  }
-}
-
-@keyframes yi-cross-c {
-  from {
-    transform: translate(0, 0) rotate(0deg);
-  }
-  to {
-    transform: translate(-16px, -20px) rotate(-4deg);
-  }
-}
-
 /* 波浪带：缓慢漂移，只动 transform */
 .ribbon-float {
   animation: yi-ribbon 8s ease-in-out infinite alternate;
@@ -173,9 +133,6 @@ html.lenis body {
     transition: none;
   }
 
-  .cross-float-a,
-  .cross-float-b,
-  .cross-float-c,
   .ribbon-float,
   .astro-float,
   .twinkle {
