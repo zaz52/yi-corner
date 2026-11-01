@@ -604,8 +604,6 @@ function Home() {
           <p>用 React 和 Tailwind 手工搭建，手机打开也不卡。</p>
           <div className="flex gap-4">
             <a href="?view=classic" className="hover:text-[#2B123D]">经典版</a>
-            <a href="https://github.com/zaz52" target="_blank" rel="noreferrer" className="hover:text-[#2B123D]">GitHub</a>
-            <a href="https://x.com/Cangbaic" target="_blank" rel="noreferrer" className="hover:text-[#2B123D]">X</a>
           </div>
         </div>
       </footer>
