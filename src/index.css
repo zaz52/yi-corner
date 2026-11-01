@@ -92,6 +92,52 @@ html {
   }
 }
 
+/* Lenis 顺滑滚动推荐样式 */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* 太空人漂浮＋星星闪烁：只动 transform 与 opacity */
+.astro-float {
+  animation: yi-astro 6s ease-in-out infinite alternate;
+}
+
+@keyframes yi-astro {
+  from {
+    transform: translateY(-10px) rotate(-2deg);
+  }
+  to {
+    transform: translateY(10px) rotate(2deg);
+  }
+}
+
+.twinkle {
+  animation: yi-twinkle 3s ease-in-out infinite;
+}
+
+@keyframes yi-twinkle {
+  0%,
+  100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
 /* 移动端菜单链接：逐个上浮淡入 */
 .menu-link {
   opacity: 0;
@@ -130,7 +176,9 @@ html {
   .cross-float-a,
   .cross-float-b,
   .cross-float-c,
-  .ribbon-float {
+  .ribbon-float,
+  .astro-float,
+  .twinkle {
     animation: none;
   }
 

@@ -1,16 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
 import type { CSSProperties, ReactNode } from 'react';
+import Lenis from 'lenis';
 import {
   ArrowUpRight,
-  Clapperboard,
-  FlaskConical,
-  Gamepad2,
   Github,
-  Music,
-  ShoppingBag,
-  Smartphone,
   X,
-  Zap,
 } from 'lucide-react';
 import ClassicApp from './ClassicApp';
 import { defaultProjects as projects } from './data/siteProjects';
@@ -86,8 +80,6 @@ const SITES: MySite[] = [
     visual: 'bg-[#A34D28]',
   },
 ];
-
-const SITE_ICONS = [ShoppingBag, Smartphone, Zap, Clapperboard, Music, FlaskConical];
 
 const WORK_VISUALS = [
   'bg-[#FF4D8D]',
@@ -230,11 +222,198 @@ function Ribbon() {
   );
 }
 
+/* 卡片配图：纯 SVG 插画，不放文字 */
+function CardArt({ variant, bg, wide = false }: { variant: number; bg: string; wide?: boolean }) {
+  return (
+    <div
+      className={`work-visual relative overflow-hidden rounded-[20px] ${wide ? 'aspect-[16/10] md:aspect-[21/9]' : 'aspect-[16/10]'} ${bg}`}
+    >
+      <svg
+        aria-hidden
+        className="absolute inset-0 size-full"
+        viewBox="0 0 400 250"
+        preserveAspectRatio="xMidYMid slice"
+      >
+        {variant === 0 && (
+          <>
+            <circle cx="200" cy="125" r="55" fill="#ffffff" opacity="0.95" />
+            <ellipse cx="200" cy="125" rx="115" ry="34" fill="none" stroke="#ffffff" strokeOpacity="0.55" strokeWidth="2" transform="rotate(-20 200 125)" />
+            <ellipse cx="200" cy="125" rx="135" ry="26" fill="none" stroke="#ffffff" strokeOpacity="0.35" strokeWidth="2" transform="rotate(14 200 125)" />
+            <circle cx="305" cy="88" r="8" fill="#ffffff" />
+            <circle cx="92" cy="168" r="6" fill="#ffffff" opacity="0.8" />
+            <circle cx="200" cy="125" r="22" fill="#000000" opacity="0.12" />
+          </>
+        )}
+        {variant === 1 && (
+          <>
+            <path d="M0 150 C 70 100, 130 200, 200 150 S 330 100, 400 150 L 400 250 L 0 250 Z" fill="#ffffff" opacity="0.25" />
+            <path d="M0 180 C 70 130, 130 230, 200 180 S 330 130, 400 180 L 400 250 L 0 250 Z" fill="#ffffff" opacity="0.45" />
+            <path d="M0 210 C 70 165, 130 250, 200 210 S 330 165, 400 210 L 400 250 L 0 250 Z" fill="#ffffff" opacity="0.7" />
+            <circle cx="330" cy="60" r="18" fill="#ffffff" opacity="0.9" />
+          </>
+        )}
+        {variant === 2 && (
+          <>
+            {Array.from({ length: 12 }).map((_, i) => {
+              const x = 60 + (i % 4) * 75;
+              const y = 35 + Math.floor(i / 4) * 65;
+              const filled = (i * 7) % 3 === 0;
+              return (
+                <rect
+                  key={i}
+                  x={x}
+                  y={y}
+                  width="52"
+                  height="44"
+                  rx="12"
+                  fill={filled ? '#ffffff' : 'none'}
+                  fillOpacity={filled ? 0.9 : 0}
+                  stroke="#ffffff"
+                  strokeOpacity={filled ? 0 : 0.6}
+                  strokeWidth="2"
+                />
+              );
+            })}
+          </>
+        )}
+        {variant === 3 && (
+          <>
+            <rect x="60" y="40" width="280" height="170" rx="16" fill="#ffffff" opacity="0.12" stroke="#ffffff" strokeOpacity="0.85" strokeWidth="2" />
+            <line x1="60" y1="70" x2="340" y2="70" stroke="#ffffff" strokeOpacity="0.6" strokeWidth="2" />
+            <circle cx="82" cy="55" r="5" fill="#ffffff" opacity="0.9" />
+            <circle cx="100" cy="55" r="5" fill="#ffffff" opacity="0.6" />
+            <circle cx="118" cy="55" r="5" fill="#ffffff" opacity="0.4" />
+            <rect x="84" y="96" width="150" height="12" rx="6" fill="#ffffff" opacity="0.85" />
+            <rect x="84" y="120" width="110" height="10" rx="5" fill="#ffffff" opacity="0.5" />
+            <polyline points="84,190 130,160 170,178 220,130 270,150 316,110" fill="none" stroke="#ffffff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+          </>
+        )}
+        {variant === 4 && (
+          <>
+            <rect x="150" y="25" width="100" height="200" rx="20" fill="none" stroke="#ffffff" strokeOpacity="0.9" strokeWidth="3" />
+            <rect x="164" y="48" width="72" height="130" rx="10" fill="#ffffff" opacity="0.2" />
+            <rect x="178" y="66" width="44" height="10" rx="5" fill="#ffffff" opacity="0.85" />
+            <rect x="178" y="86" width="44" height="8" rx="4" fill="#ffffff" opacity="0.5" />
+            <rect x="178" y="102" width="30" height="8" rx="4" fill="#ffffff" opacity="0.5" />
+            <circle cx="200" cy="200" r="8" fill="#ffffff" opacity="0.85" />
+          </>
+        )}
+        {variant === 5 && (
+          <>
+            <rect x="150" y="55" width="100" height="100" rx="18" fill="#ffffff" opacity="0.25" transform="rotate(45 200 105)" />
+            <rect x="170" y="75" width="60" height="60" rx="14" fill="#ffffff" opacity="0.55" transform="rotate(45 200 105)" />
+            <rect x="188" y="93" width="24" height="24" rx="8" fill="#ffffff" opacity="0.95" transform="rotate(45 200 105)" />
+            <circle cx="105" cy="70" r="6" fill="#ffffff" opacity="0.9" />
+            <circle cx="300" cy="180" r="5" fill="#ffffff" opacity="0.7" />
+            <path d="M 92 190 l 4 10 10 4 -10 4 -4 10 -4 -10 -10 -4 10 -4 Z" fill="#ffffff" opacity="0.8" />
+          </>
+        )}
+      </svg>
+    </div>
+  );
+}
+
+/* 结尾太空人：原创 SVG 造型，漂浮＋随滚动转动 */
+function Astronaut() {
+  return (
+    <div aria-hidden className="relative mx-auto w-56 md:w-72">
+      <div className="absolute inset-0 scale-150 rounded-full bg-[radial-gradient(circle,rgba(36,52,255,0.35),rgba(53,224,230,0.18),transparent_70%)] blur-2xl" />
+      <div className="astro-float relative">
+        <svg viewBox="0 0 200 240" className="w-full drop-shadow-2xl">
+          <rect x="52" y="92" width="96" height="82" rx="20" fill="#E4E4EA" />
+          <rect x="70" y="100" width="60" height="70" rx="24" fill="#F4F4F7" />
+          <rect x="88" y="112" width="24" height="16" rx="5" fill="#2434FF" />
+          <circle cx="96" cy="142" r="3.5" fill="#35E0E6" />
+          <circle cx="110" cy="142" r="3.5" fill="#FF4D8D" />
+          <circle cx="100" cy="24" r="36" fill="#F4F4F7" />
+          <ellipse cx="100" cy="66" rx="27" ry="21" fill="#0A0A0C" />
+          <path d="M 84 56 Q 96 48, 108 54" stroke="#ffffff" strokeOpacity="0.8" strokeWidth="4" fill="none" strokeLinecap="round" />
+          <line x1="100" y1="24" x2="100" y2="10" stroke="#F4F4F7" strokeWidth="4" strokeLinecap="round" />
+          <circle cx="100" cy="7" r="4" fill="#35E0E6" />
+          <rect x="42" y="104" width="18" height="52" rx="9" fill="#F4F4F7" transform="rotate(-18 51 130)" />
+          <rect x="140" y="104" width="18" height="52" rx="9" fill="#F4F4F7" transform="rotate(18 149 130)" />
+          <rect x="74" y="168" width="17" height="42" rx="8" fill="#F4F4F7" />
+          <rect x="109" y="168" width="17" height="42" rx="8" fill="#F4F4F7" />
+        </svg>
+      </div>
+      <span className="twinkle absolute top-2 left-4 text-lg text-white/70" style={{ animationDelay: '0s' }}>+</span>
+      <span className="twinkle absolute top-16 right-2 text-sm text-white/60" style={{ animationDelay: '1.2s' }}>+</span>
+      <span className="twinkle absolute bottom-10 left-0 text-sm text-white/50" style={{ animationDelay: '2s' }}>+</span>
+      <span className="twinkle absolute right-6 bottom-24 text-base text-white/60" style={{ animationDelay: '0.6s' }}>✦</span>
+    </div>
+  );
+}
+
 /* ================= 新首页：按 Lusion 真实视觉 ================= */
 
 function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  /* 顺滑滚动：Lenis 惯性滚动，锚点走 lenis.scrollTo */
+  useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const lenis = new Lenis({ lerp: 0.09, smoothWheel: true });
+    let raf = 0;
+    const loop = (time: number) => {
+      lenis.raf(time);
+      raf = requestAnimationFrame(loop);
+    };
+    raf = requestAnimationFrame(loop);
+    const onClick = (e: MouseEvent) => {
+      const a = (e.target as HTMLElement).closest?.('a[href^="#"]') as HTMLAnchorElement | null;
+      if (!a) return;
+      const id = a.getAttribute('href');
+      if (!id || id === '#') return;
+      const el = document.querySelector(id);
+      if (!el) return;
+      e.preventDefault();
+      lenis.scrollTo(el as HTMLElement, { offset: -112, duration: 1.2 });
+    };
+    document.addEventListener('click', onClick);
+    return () => {
+      cancelAnimationFrame(raf);
+      lenis.destroy();
+      document.removeEventListener('click', onClick);
+    };
+  }, []);
+
+  /* 预加载：黑底＋进度条＋左下角计数，约 1 秒后上滑离场 */
+  const [count, setCount] = useState(0);
+  const [preDone, setPreDone] = useState(false);
+  const [preGone, setPreGone] = useState(false);
+  useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      setPreGone(true);
+      return;
+    }
+    const t = setInterval(() => {
+      setCount((c) => {
+        if (c >= 100) {
+          clearInterval(t);
+          return 100;
+        }
+        return Math.min(100, c + 2);
+      });
+    }, 20);
+    return () => clearInterval(t);
+  }, []);
+  useEffect(() => {
+    if (count < 100) return;
+    const t1 = setTimeout(() => setPreDone(true), 250);
+    const t2 = setTimeout(() => setPreGone(true), 1000);
+    return () => {
+      clearTimeout(t1);
+      clearTimeout(t2);
+    };
+  }, [count]);
+  useEffect(() => {
+    if (preGone) return;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = prev;
+    };
+  }, [preGone]);
   /* 滚动联动：元素随滚动视差移动，只写 transform */
   useEffect(() => {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
@@ -248,7 +427,7 @@ function Home() {
         const rect = el.getBoundingClientRect();
         const offset = rect.top + rect.height / 2 - vh / 2;
         const y = offset * factor;
-        const r = rot ? Math.max(-4, Math.min(4, offset * rot)) : 0;
+        const r = rot ? Math.max(-8, Math.min(8, offset * rot)) : 0;
         el.style.transform = `translate3d(0, ${y.toFixed(1)}px, 0)${r ? ` rotate(${r.toFixed(2)}deg)` : ''}`;
       });
     };
@@ -267,6 +446,19 @@ function Home() {
 
   return (
     <div className="min-h-screen bg-[#EDF0F3] text-[#0A0A0C] antialiased">
+      {!preGone && (
+        <div
+          aria-hidden
+          className={`fixed inset-0 z-[100] bg-[#0A0A0C] transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${preDone ? '-translate-y-full' : ''}`}
+        >
+          <div className="absolute top-1/2 right-6 left-6 h-1 overflow-hidden rounded-full bg-white/20 md:right-10 md:left-10">
+            <div className="h-full bg-white transition-[width] duration-150" style={{ width: `${count}%` }} />
+          </div>
+          <p className="absolute bottom-6 left-6 text-7xl font-medium text-white md:bottom-10 md:left-10 md:text-8xl">
+            {count}
+          </p>
+        </div>
+      )}
       <a
         href="#sites"
         className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:rounded-full focus:bg-[#0A0A0C] focus:px-4 focus:py-2 focus:text-sm focus:font-bold focus:text-white"
@@ -403,44 +595,38 @@ function Home() {
                 href={SITES[0].href}
                 target="_blank"
                 rel="noreferrer"
-                className="group block overflow-hidden rounded-[20px]"
+                className="group block"
               >
-                <div className={`work-visual flex aspect-[16/10] flex-col justify-end p-6 md:aspect-[21/9] md:p-10 ${SITES[0].visual}`}>
-                  <span className="inline-flex w-fit items-center gap-2 rounded-full bg-white/20 px-3 py-1 text-xs font-bold text-white">
-                    {SITES[0].tag}
-                  </span>
-                  <h3 className="mt-4 text-4xl font-medium text-white md:text-6xl">{SITES[0].name}</h3>
-                  <p className="mt-2 max-w-xl text-base text-white/85 md:text-xl">{SITES[0].desc}</p>
-                </div>
-                <div className="flex items-center justify-between pt-4">
-                  <span className="text-xs font-bold tracking-[0.2em] text-black/50 uppercase">Shop • Featured</span>
-                  <span className="inline-flex items-center gap-2 rounded-full bg-[#0A0A0C] px-5 py-2.5 text-sm font-bold text-white transition-transform duration-500 group-hover:scale-105">
+                <CardArt variant={0} bg={SITES[0].visual} wide />
+                <div className="flex items-start justify-between gap-4 pt-4">
+                  <div>
+                    <p className="text-xs font-bold tracking-[0.2em] text-black/50 uppercase">{SITES[0].tag}</p>
+                    <h3 className="mt-2 flex items-center gap-2 text-2xl font-medium md:text-3xl">
+                      {SITES[0].name}
+                      <ArrowUpRight size={22} className="shrink-0 transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1" />
+                    </h3>
+                    <p className="mt-2 max-w-xl text-base leading-relaxed text-black/60 md:text-lg">{SITES[0].desc}</p>
+                  </div>
+                  <span className="inline-flex shrink-0 items-center gap-2 rounded-full bg-[#0A0A0C] px-5 py-2.5 text-sm font-bold text-white transition-transform duration-500 group-hover:scale-105">
                     {SITES[0].cta} <ArrowUpRight size={16} />
                   </span>
                 </div>
               </a>
             </Reveal>
-            <div className="mt-12 grid gap-x-10 gap-y-12 md:grid-cols-2">
-              {SITES.slice(1).map((site, i) => {
-                const Icon = SITE_ICONS[i + 1];
-                return (
-                  <Reveal key={site.href}>
-                    <a href={site.href} target="_blank" rel="noreferrer" className="group block">
-                      <div className={`work-visual relative flex aspect-[16/10] items-center justify-center overflow-hidden rounded-[20px] ${site.visual}`}>
-                        <Icon size={96} strokeWidth={1.2} className="text-white/90 transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-110" />
-                        <span aria-hidden className="absolute top-4 left-5 text-lg text-white/50">+</span>
-                        <span aria-hidden className="absolute right-5 bottom-4 text-lg text-white/50">+</span>
-                      </div>
-                      <p className="pt-4 text-xs font-bold tracking-[0.2em] text-black/50 uppercase">{site.tag}</p>
-                      <h3 className="mt-2 flex items-center gap-2 text-3xl font-medium md:text-5xl">
-                        {site.name}
-                        <ArrowUpRight size={28} className="shrink-0 transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1" />
-                      </h3>
-                      <p className="mt-2 max-w-md text-base leading-relaxed text-black/60 md:text-lg">{site.desc}</p>
-                    </a>
-                  </Reveal>
-                );
-              })}
+            <div className="mt-12 grid gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
+              {SITES.slice(1).map((site, i) => (
+                <Reveal key={site.href}>
+                  <a href={site.href} target="_blank" rel="noreferrer" className="group block">
+                    <CardArt variant={(i + 2) % 6} bg={site.visual} />
+                    <p className="pt-4 text-xs font-bold tracking-[0.2em] text-black/50 uppercase">{site.tag}</p>
+                    <h3 className="mt-2 flex items-center gap-2 text-2xl font-medium md:text-3xl">
+                      {site.name}
+                      <ArrowUpRight size={22} className="shrink-0 transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1" />
+                    </h3>
+                    <p className="mt-2 max-w-md text-base leading-relaxed text-black/60 md:text-lg">{site.desc}</p>
+                  </a>
+                </Reveal>
+              ))}
             </div>
           </div>
         </section>
@@ -451,24 +637,18 @@ function Home() {
             <p className="text-xs font-bold tracking-[0.2em] text-black/50 uppercase">Featured work •</p>
             <h2 className="mt-2 text-4xl font-medium md:text-6xl">精选作品</h2>
           </Reveal>
-          <div className="mt-10 grid gap-x-10 gap-y-12 md:grid-cols-2">
+          <div className="mt-10 grid gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
             {projects.map((project, i) => (
               <Reveal key={project.href}>
                 <article className="group">
                   <a href={project.href} target="_blank" rel="noreferrer" className="block">
-                    <div className={`work-visual relative flex aspect-[16/10] items-center justify-center overflow-hidden rounded-[20px] ${WORK_VISUALS[i % WORK_VISUALS.length]}`}>
-                      <span aria-hidden className="text-[7rem] leading-none font-bold text-white/90 md:text-[9rem]">
-                        {project.name.charAt(0)}
-                      </span>
-                      <span aria-hidden className="absolute top-4 left-5 text-lg text-white/50">+</span>
-                      <span aria-hidden className="absolute right-5 bottom-4 text-lg text-white/50">+</span>
-                    </div>
+                    <CardArt variant={i % 6} bg={WORK_VISUALS[i % WORK_VISUALS.length]} />
                     <p className="pt-4 text-xs font-bold tracking-[0.2em] text-black/50 uppercase">
                       {[project.type, ...project.tags].join(' • ')}
                     </p>
-                    <h3 className="mt-2 flex items-center gap-2 text-3xl font-medium md:text-5xl">
+                    <h3 className="mt-2 flex items-center gap-2 text-2xl font-medium md:text-3xl">
                       {project.featured ? '→ ' : ''}{project.name}
-                      <ArrowUpRight size={28} className="shrink-0 transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1" />
+                      <ArrowUpRight size={22} className="shrink-0 transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1" />
                     </h3>
                     <p className="mt-2 max-w-md text-base leading-relaxed text-black/60 md:text-lg">{project.desc}</p>
                   </a>
@@ -545,18 +725,14 @@ function Home() {
             <p className="text-xs font-bold tracking-[0.2em] text-black/50 uppercase">Games •</p>
             <h2 className="mt-2 text-4xl font-medium md:text-6xl">小游戏</h2>
           </Reveal>
-          <div className="mt-10 grid gap-x-10 gap-y-12 md:grid-cols-2">
-            {GAMES.map((game) => (
+          <div className="mt-10 grid gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
+            {GAMES.map((game, i) => (
               <Reveal key={game.name}>
                 <a href={game.href} className="group block">
-                  <div className={`work-visual relative flex aspect-[16/10] items-center justify-center overflow-hidden rounded-[20px] ${game.visual}`}>
-                    <Gamepad2 size={96} strokeWidth={1.2} className="text-white/90 transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-110" />
-                    <span aria-hidden className="absolute top-4 left-5 text-lg text-white/50">+</span>
-                    <span aria-hidden className="absolute right-5 bottom-4 text-lg text-white/50">+</span>
-                  </div>
-                  <h3 className="mt-4 flex items-center gap-2 text-3xl font-medium md:text-5xl">
+                  <CardArt variant={(i + 4) % 6} bg={game.visual} />
+                  <h3 className="mt-4 flex items-center gap-2 text-2xl font-medium md:text-3xl">
                     {game.name}
-                    <ArrowUpRight size={28} className="shrink-0 transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1" />
+                    <ArrowUpRight size={22} className="shrink-0 transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1" />
                   </h3>
                   <p className="mt-2 text-base text-black/60 md:text-lg">{game.desc}</p>
                 </a>
@@ -618,11 +794,14 @@ function Home() {
         </section>
       </main>
 
-      {/* 黑色结尾 */}
-      <footer className="bg-[#0A0A0C] px-4 py-24 text-white md:py-32">
+      {/* 黑色结尾：太空人动画 */}
+      <footer className="relative overflow-hidden bg-[#0A0A0C] px-4 py-24 text-white md:py-32">
         <div className="mx-auto max-w-5xl text-center">
           <Reveal>
-            <p className="text-[clamp(2.5rem,8vw,5.5rem)] leading-[1.05] font-medium text-balance">
+            <div data-parallax="-0.06" data-parallax-rotate="0.01">
+              <Astronaut />
+            </div>
+            <p className="mt-12 text-[clamp(2.5rem,8vw,5.5rem)] leading-[1.05] font-medium text-balance">
               来玩一圈，
               <br />
               看看你最想逛哪。
