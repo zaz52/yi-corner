@@ -1,14 +1,5 @@
 [
   {
-    "name": "yi-corner-template",
-    "type": "GitHub 开源项目",
-    "desc": "GitHub 上的开源项目。",
-    "href": "https://github.com/zaz52/yi-corner-template",
-    "tags": [],
-    "featured": false,
-    "github": "https://github.com/zaz52/yi-corner-template"
-  },
-  {
     "name": "cangbai-cinema",
     "type": "GitHub 开源项目",
     "desc": "苍柏 CINEMA：Cloudflare Workers + D1 影视搜索、授权源管理与在线播放网站",
@@ -18,5 +9,14 @@
     ],
     "featured": false,
     "github": "https://github.com/zaz52/cangbai-cinema"
+  },
+  {
+    "name": "yi-corner-template",
+    "type": "GitHub 开源项目",
+    "desc": "GitHub 上的开源项目。",
+    "href": "https://github.com/zaz52/yi-corner-template",
+    "tags": [],
+    "featured": false,
+    "github": "https://github.com/zaz52/yi-corner-template"
   }
 ]
